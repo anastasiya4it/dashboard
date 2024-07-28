@@ -1,0 +1,149 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet" href="css/style.min.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet")
+    body
+        .body
+            header.header 
+                .header__inner
+                    nav.nav 
+                        |
+                        |
+                        a.dashboard(href="#")
+                            |
+                            |
+                            img.dashboard__img(src="images/logo.png", alt="logo")
+                            .dashboard__title
+                                h1.dashboard__name Dashboard
+                                .dashboard__version v.01
+                        ul.menu__list 
+                            li.menu__item
+                                a.menu__link(href="#")
+                                    |
+                                    |
+                                    img.menu__link-img(src="images/icon-dashboard.svg", alt="")
+                                    .menu__link-name Dashboard
+                            li.menu__item
+                                |
+                                |
+                                a.menu__link(href="#")
+                                    |
+                                    |
+                                    img.menu__link-img(src="images/icon-product.svg", alt="")
+                                    .menu__link-name Product
+                            li.menu__item
+                                |
+                                |
+                                a.menu__link.menu__link--choosed(href="#") 
+                                    |
+                                    |
+                                    img.menu__link-img(src="images/icon-customers.svg", alt="")
+                                    .menu__link-name Customers
+                            li.menu__item
+                                |
+                                |
+                                a.menu__link(href="#") 
+                                    |
+                                    |
+                                    img.menu__link-img(src="images/icon-income.svg", alt="")
+                                    .menu__link-name Income
+                            li.menu__item
+                                |
+                                |
+                                a.menu__link(href="#") 
+                                    |
+                                    |
+                                    img.menu__link-img(src="images/icon-promote.svg", alt="")
+                                    .menu__link-name Promote
+                            li.menu__item
+                                |
+                                |
+                                a.menu__link(href="#") 
+                                    |
+                                    |
+                                    img.menu__link-img(src="images/icon-help.svg", alt="")
+                                    .menu__link-name Help
+                    |
+                    |
+                    a.user(href="#")
+                        |
+                        |
+                        img.user__img(src="images/user.png", alt="user")
+                        .user__title
+                            .user__title-name Evano
+                            .user__title-role Project Manager
+            main.main
+                section.accost
+                    .accost__header
+                        h1.accost__title Hello Evano 👋🏼, 
+                        label.burger(for="burger")
+                            input.burger__list(type="checkbox" id="burger")
+                            span.burger__item
+                            span.burger__item
+                            span.burger__item
+                    .customers 
+                        .customers__header
+                            .customers__name
+                                h2.customers__title All Customers
+                                .customers__active Active Members
+                            form.search(action="#")
+                                button.search__btn
+                                    img.search__btn-img(src="images/icon-search.svg", alt="")
+                                input.search__input(type="text", placeholder="Search")
+                        table.table 
+                            thead.table__head
+                                tr.table__head-row
+                                    -
+                                        var array=["Customer Name", "Company", "Phone Number", "Email", "Country", "Status"]
+                                    each item in array
+                                        th.table__head-item(class=(item=="Status"?"table__head-last":"") data-th=`${item}`)=item  
+                                                                  
+                                -
+                                    var list = [["Jane Cooper", "Microsoft", "(225) 555-0118", "jane@microsoft.com", "United States", "Active"],
+                                                ["Floyd Miles", "Yahoo", "(205) 555-0100", "floyd@yahoo.com", "Kiribati", "Inactive"],
+                                                ["Ronald Richards", "Adobe", "(302) 555-0107", "ronald@adobe.com", "Israel", "Inactive"],
+                                                ["Marvin McKinney", "Tesla", "(252) 555-0126", "marvin@tesla.com", "Iran", "Active"],
+                                                ["Jerome Bell", "Google", "(629) 555-0129", "jerome@google.com", "Réunion", "Active"],
+                                                ["Kathryn Murphy", "Microsoft", "(406) 555-0120", "kathryn@microsoft.com", "Curaçao", "Active"],
+                                                ["Jacob Jones", "Yahoo", "(208) 555-0112", "jacob@yahoo.com", "Brazil", "Active"],
+                                                ["Kristin Watson", "Facebook", "(704) 555-0127", "kristin@facebook.com", "Åland Islands", "Inactive"],]                                            
+                                tbody.table__body
+                                    each items in list                                
+                                        tr.table__row
+                                            - let i = 1
+                                            -
+                                                var item = items
+                                            each item in items
+                                                if item=="Inactive"||item=="Active"
+                                                    td.table__body-last(class=[`table__body-colom--${i}`])
+                                                        button.btn(class=(item=="Inactive"?"btn--inactive":"btn--active"))= item
+                                                else
+                                                    td.table__body-item(class=[`table__body-colom--${i}`])= item 
+                                                - i++  
+                        .base-navigation 
+                            .base-navigation__title Showing data 1 to 8 of  256K entries
+                            .base-navigation__pagination
+                                - const allPage = 40
+                                - const youSeePage = 4
+                                - const selectedPage = 1
+                                  .pagination
+                                    |
+                                    |
+                                    button.pagination__btn(href="#" title="Go to the first page." value="<") <
+                                    - let i = 0
+                                    while (i < youSeePage)
+                                        button.pagination__btn(href="#" aria-label="Go to page." class=(i === selectedPage-1) ? "pagination__btn--selected" : "")= i + 1
+                                        - i++
+                                    |
+                                    |
+                                    .pagination__noBtn ...
+                                    button.pagination__btn(href="#" title="Go to the last page.") #{allPage}
+                                    button.pagination__btn(href="#" title="Go to the last page.") >   
+        script(src="js/main.min.js")     
+

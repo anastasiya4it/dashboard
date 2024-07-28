@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="body">
+      <header class="header"> 
+        <div class="header__inner">
+          <nav class="nav">
+             
+            <a class="dashboard" href="#">
+              
+              <img class="dashboard__img" src="images/logo.png" alt="logo">
+              <div class="dashboard__title">
+                <h1 class="dashboard__name">Dashboard</h1>
+                <div class="dashboard__version">v.01</div>
+              </div></a>
+            <ul class="menu__list"> 
+              <li class="menu__item"><a class="menu__link" href="#">
+                  
+                  <img class="menu__link-img" src="images/icon-dashboard.svg" alt="">
+                  <div class="menu__link-name">Dashboard</div></a></li>
+              <li class="menu__item">
+                
+                <a class="menu__link" href="#">
+                  
+                  <img class="menu__link-img" src="images/icon-product.svg" alt="">
+                  <div class="menu__link-name">Product</div></a>
+              </li>
+              <li class="menu__item">
+                
+                <a class="menu__link menu__link--choosed" href="#">
+                   
+                  <img class="menu__link-img" src="images/icon-customers.svg" alt="">
+                  <div class="menu__link-name">Customers</div></a>
+              </li>
+              <li class="menu__item">
+                
+                <a class="menu__link" href="#">
+                   
+                  <img class="menu__link-img" src="images/icon-income.svg" alt="">
+                  <div class="menu__link-name">Income</div></a>
+              </li>
+              <li class="menu__item">
+                
+                <a class="menu__link" href="#">
+                   
+                  <img class="menu__link-img" src="images/icon-promote.svg" alt="">
+                  <div class="menu__link-name">Promote</div></a>
+              </li>
+              <li class="menu__item">
+                
+                <a class="menu__link" href="#">
+                   
+                  <img class="menu__link-img" src="images/icon-help.svg" alt="">
+                  <div class="menu__link-name">Help</div></a>
+              </li>
+            </ul>
+          </nav>
+          <a class="user" href="#">
+            
+            <img class="user__img" src="images/user.png" alt="user">
+            <div class="user__title">
+              <div class="user__title-name">Evano</div>
+              <div class="user__title-role">Project Manager</div>
+            </div></a>
+        </div>
+      </header>
+      <main class="main">
+        <section class="accost">
+          <div class="accost__header">
+            <h1 class="accost__title">Hello Evano 👋🏼, </h1>
+            <label class="burger" for="burger">
+              <input class="burger__list" type="checkbox" id="burger"><span class="burger__item"></span><span class="burger__item"></span><span class="burger__item"></span>
+            </label>
+          </div>
+          <div class="customers"> 
+            <div class="customers__header">
+              <div class="customers__name">
+                <h2 class="customers__title">All Customers</h2>
+                <div class="customers__active">Active Members</div>
+              </div>
+              <form class="search" action="#">
+                <button class="search__btn"><img class="search__btn-img" src="images/icon-search.svg" alt=""></button>
+                <input class="search__input" type="text" placeholder="Search">
+              </form>
+            </div>
+            <table class="table"> 
+              <thead class="table__head">
+                <tr class="table__head-row">
+                  <th class="table__head-item" data-th="Customer Name">Customer Name</th>
+                  <th class="table__head-item" data-th="Company">Company</th>
+                  <th class="table__head-item" data-th="Phone Number">Phone Number</th>
+                  <th class="table__head-item" data-th="Email">Email</th>
+                  <th class="table__head-item" data-th="Country">Country</th>
+                  <th class="table__head-item table__head-last" data-th="Status">Status</th>
+                </tr>
+                <tbody class="table__body">
+                  <tr class="table__row">
+                    <td class="table__body-item table__body-colom--1">Jane Cooper</td>
+                    <td class="table__body-item table__body-colom--2">Microsoft</td>
+                    <td class="table__body-item table__body-colom--3">(225) 555-0118</td>
+                    <td class="table__body-item table__body-colom--4">jane@microsoft.com</td>
+                    <td class="table__body-item table__body-colom--5">United States</td>
+                    <td class="table__body-last table__body-colom--6">
+                      <button class="btn btn--active">Active</button>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__body-item table__body-colom--1">Floyd Miles</td>
+                    <td class="table__body-item table__body-colom--2">Yahoo</td>
+                    <td class="table__body-item table__body-colom--3">(205) 555-0100</td>
+                    <td class="table__body-item table__body-colom--4">floyd@yahoo.com</td>
+                    <td class="table__body-item table__body-colom--5">Kiribati</td>
+                    <td class="table__body-last table__body-colom--6">
+                      <button class="btn btn--inactive">Inactive</button>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__body-item table__body-colom--1">Ronald Richards</td>
+                    <td class="table__body-item table__body-colom--2">Adobe</td>
+                    <td class="table__body-item table__body-colom--3">(302) 555-0107</td>
+                    <td class="table__body-item table__body-colom--4">ronald@adobe.com</td>
+                    <td class="table__body-item table__body-colom--5">Israel</td>
+                    <td class="table__body-last table__body-colom--6">
+                      <button class="btn btn--inactive">Inactive</button>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__body-item table__body-colom--1">Marvin McKinney</td>
+                    <td class="table__body-item table__body-colom--2">Tesla</td>
+                    <td class="table__body-item table__body-colom--3">(252) 555-0126</td>
+                    <td class="table__body-item table__body-colom--4">marvin@tesla.com</td>
+                    <td class="table__body-item table__body-colom--5">Iran</td>
+                    <td class="table__body-last table__body-colom--6">
+                      <button class="btn btn--active">Active</button>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__body-item table__body-colom--1">Jerome Bell</td>
+                    <td class="table__body-item table__body-colom--2">Google</td>
+                    <td class="table__body-item table__body-colom--3">(629) 555-0129</td>
+                    <td class="table__body-item table__body-colom--4">jerome@google.com</td>
+                    <td class="table__body-item table__body-colom--5">Réunion</td>
+                    <td class="table__body-last table__body-colom--6">
+                      <button class="btn btn--active">Active</button>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__body-item table__body-colom--1">Kathryn Murphy</td>
+                    <td class="table__body-item table__body-colom--2">Microsoft</td>
+                    <td class="table__body-item table__body-colom--3">(406) 555-0120</td>
+                    <td class="table__body-item table__body-colom--4">kathryn@microsoft.com</td>
+                    <td class="table__body-item table__body-colom--5">Curaçao</td>
+                    <td class="table__body-last table__body-colom--6">
+                      <button class="btn btn--active">Active</button>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__body-item table__body-colom--1">Jacob Jones</td>
+                    <td class="table__body-item table__body-colom--2">Yahoo</td>
+                    <td class="table__body-item table__body-colom--3">(208) 555-0112</td>
+                    <td class="table__body-item table__body-colom--4">jacob@yahoo.com</td>
+                    <td class="table__body-item table__body-colom--5">Brazil</td>
+                    <td class="table__body-last table__body-colom--6">
+                      <button class="btn btn--active">Active</button>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__body-item table__body-colom--1">Kristin Watson</td>
+                    <td class="table__body-item table__body-colom--2">Facebook</td>
+                    <td class="table__body-item table__body-colom--3">(704) 555-0127</td>
+                    <td class="table__body-item table__body-colom--4">kristin@facebook.com</td>
+                    <td class="table__body-item table__body-colom--5">Åland Islands</td>
+                    <td class="table__body-last table__body-colom--6">
+                      <button class="btn btn--inactive">Inactive</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </thead>
+            </table>
+            <div class="base-navigation"> 
+              <div class="base-navigation__title">Showing data 1 to 8 of  256K entries</div>
+              <div class="base-navigation__pagination">
+                <div class="pagination">
+                  
+                  
+                  <button class="pagination__btn" href="#" title="Go to the first page." value="&lt;"><</button>
+                  <button class="pagination__btn pagination__btn--selected" href="#" aria-label="Go to page.">1</button>
+                  <button class="pagination__btn" href="#" aria-label="Go to page.">2</button>
+                  <button class="pagination__btn" href="#" aria-label="Go to page.">3</button>
+                  <button class="pagination__btn" href="#" aria-label="Go to page.">4</button>
+                  
+                  <div class="pagination__noBtn">...</div>
+                  <button class="pagination__btn" href="#" title="Go to the last page.">40</button>
+                  <button class="pagination__btn" href="#" title="Go to the last page.">>   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/main.min.js">    </script>
+  </body>
+</html>
